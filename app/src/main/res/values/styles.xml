@@ -1,0 +1,77 @@
+<resources>
+
+    <!--Theme app-->
+    <style name="MyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:spinnerItemStyle">@style/spinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/spinnerItemHoloDrop</item>
+        <item name="android:itemBackground">@drawable/shapemeu</item>
+    </style>
+
+    <!--Spinner Sitting-->
+    <style name="spinnerItem"
+        parent="android:Widget.Holo.TextView.SpinnerItem">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="spinnerItemHoloDrop"
+        parent="android:Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    
+    <!--Brush Properties-->
+    <style name="BrushPropertiesText">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">135dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="SittingProperties">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+    <style name="PropertiesControl">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:popupBackground">@drawable/shape</item>
+    </style>
+    <style name="ImageButtonBrush">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:background">@drawable/shape</item>
+    </style>
+    <style name="LinearSittingBrush">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/shapelinear</item>
+    </style>
+
+    <!--Dialog-->
+    <style name="progreeeStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="dialog_theme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+       <item name="android:windowNoTitle">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+
+
+</resources>

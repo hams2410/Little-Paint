@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ru.pro2410.littlepaint.CanvasPaint
+        android:id="@+id/idCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/sittingRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_margin="3dp">
+        <LinearLayout
+            android:id="@+id/idLinearBrush"
+            style="@style/LinearSittingBrush"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/idButtonPencil"
+                style="@style/ImageButtonBrush"
+                android:background="@drawable/shape2"
+                android:src="@drawable/pencil1"
+                android:onClick="setPreset"/>
+            <ImageButton
+                android:id="@+id/idButtonPen"
+                style="@style/ImageButtonBrush"
+                android:src="@drawable/pen"
+                android:onClick="setPreset"/>
+            <ImageButton
+                android:id="@+id/idButtonMarker"
+                style="@style/ImageButtonBrush"
+                android:src="@drawable/marker1"
+                android:onClick="setPreset"/>
+            <ImageButton
+                android:id="@+id/idButtonBrush"
+                style="@style/ImageButtonBrush"
+                android:src="@drawable/brush1"
+                android:onClick="setPreset"/>
+            <ImageButton
+                android:id="@+id/idButtonEraser"
+                style="@style/ImageButtonBrush"
+                android:src="@drawable/eraser1"
+                android:onClick="setPreset"/>
+            <ImageButton
+                android:id="@+id/idButtonPour"
+                style="@style/ImageButtonBrush"
+                android:src="@drawable/color1"
+                android:onClick="setPreset"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/idLinearSittingBrush"
+            style="@style/LinearSittingBrush"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/sitting_pallete"
+                style="@style/SittingProperties">
+                <TextView
+                    android:id="@+id/idTextPallete"
+                    style="@style/BrushPropertiesText" android:text="@string/palette"/>
+                <ImageButton
+                    android:id="@+id/idButtonPallete"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector"
+                    android:src="@drawable/pallete1"
+                    android:onClick="setColorBrush"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sitting_size" style="@style/SittingProperties">
+                <TextView
+                    android:id="@+id/idTextSize"
+                    style="@style/BrushPropertiesText"
+                    android:text="@string/size" />
+                <SeekBar
+                    android:id="@+id/idSeekbarSize"
+                    style="@style/PropertiesControl" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sitting_radius"
+                style="@style/SittingProperties">
+                <TextView
+                    android:id="@+id/idTextRadius"
+                    android:text="@string/radius"
+                    style="@style/BrushPropertiesText"/>
+                <SeekBar
+                    android:id="@+id/idSeekbarRadius"
+                    style="@style/PropertiesControl" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sitting_type"
+                style="@style/SittingProperties">
+                <TextView
+                    android:id="@+id/idTextTypeBlur"
+                    style="@style/BrushPropertiesText"
+                    android:text="@string/type" />
+               <Spinner
+                   android:id="@+id/idSpinner"
+                   style="@style/PropertiesControl"
+                   android:entries="@array/arraySpinner"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</FrameLayout>

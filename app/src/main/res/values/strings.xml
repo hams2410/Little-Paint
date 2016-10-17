@@ -1,0 +1,44 @@
+<resources>
+    <!--Menu-->
+    <string name="app_name">Little Paint</string>
+    <string name="brush">Кисть</string>
+    <string name="save">Сохранить</string>
+    <string name="clear">Очистить</string>
+    <string name="under">Назад</string>
+    <string name="redo">Вперед</string>
+    <string name="file">Файл</string>
+    <string name="open">Открыть</string>
+    <string name="share">Отправить</string>
+    <string name="Preferences">Установки</string>
+
+    <!--Spinner-->
+    <string-array name="arraySpinner">
+        <item>Без размытия</item>
+        <item>Стандартное</item>
+        <item>Сплошное</item>
+        <item>Внешнее</item>
+        <item>Внутреннее</item>
+    </string-array>
+
+    <!--Sitting-->
+    <string name="spinnerTitle">Выберите тип размытия</string>
+    <string name="titleColorDialog">Выберите цвет</string>
+    <string name="palette">Палитра</string>
+    <string name="size">Размер кисти</string>
+    <string name="radius">Радиус размытия</string>
+    <string name="type">Тип размытия</string>
+
+    <!--Sd card-->
+    <string name="sd_card_not_writeable">Карта не доступна для записи</string>
+    <string name="sd_card_not_available">SD карта не доступна</string>
+
+    <!--Dialog-->
+    <string name="loading">Пожалуйста подождите..</string>
+    <string name="messageClear">Очистить холст?</string>
+    <string name="buttonPositiv">Да</string>
+    <string name="buttonNegative">Нет</string>
+    <string name="messageExit">Сохранить изображение перед выходом?</string>
+    <string name="isNotValidFile">Пожалуйста выберите другой файл</string>
+
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/idBrush"
+        android:title="@string/brush"
+        android:orderInCategory="10"/>
+    <item
+        android:id="@+id/idSave"
+        android:title="@string/save"
+        android:orderInCategory="20"/>
+    <item
+        android:id="@+id/idClear"
+        android:title="@string/clear"
+        android:orderInCategory="30"/>
+    <item
+        android:id="@+id/idUnder"
+        android:title="@string/under"
+        android:orderInCategory="40"/>
+    <item
+        android:id="@+id/idRedo"
+        android:title="@string/redo"
+        android:orderInCategory="45"/>
+    <item
+        android:id="@+id/idFileOpen"
+        android:title="@string/open"
+        android:orderInCategory="50">
+    </item>
+
+</menu>
