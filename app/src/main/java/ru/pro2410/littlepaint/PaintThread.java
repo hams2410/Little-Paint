@@ -58,11 +58,6 @@ public class PaintThread extends Thread{
         isRedo = CurrentState.isRedo;
         idCurrent = CurrentState.idCurrent;
         isClear = CurrentState.isClear;
-
-
-
-
-
     }
 
     public void setActive(boolean active) {
@@ -84,7 +79,6 @@ public class PaintThread extends Thread{
                     if (canvas != null) {
                         if (!isSitting||isSittingDraw) {
                             canvas.drawBitmap(tBitmap, 0, 0, null);
-
                         }
                     }
                 } finally {
@@ -105,7 +99,6 @@ public class PaintThread extends Thread{
                 e.printStackTrace();
             }
         }
-
     }
 
     public void setBitmap(Bitmap bitmap, boolean clear) {
@@ -138,19 +131,13 @@ public class PaintThread extends Thread{
 
                     @Override
                     public void run() {
-
                         saveBitmapBuffer();
                     }
                 });
-
                 CurrentState.isClearBitmapAfterOnStop = false;
             }
-
-
         }
-
     }
-
 
     public void startDraw(float x, float y){
 
@@ -158,23 +145,18 @@ public class PaintThread extends Thread{
             tCanvas.drawColor(tpaintBrush.brushColor);
             return;
         }
-
         tCanvas.drawCircle(x,y,tpaintBrush.brushSize *0.5f,tpaint);
         lastX = x;
         lastY = y;
     }
 
     public void moveDraw(float x, float y) {
-
-
         if(lastX<=0||lastY<=0) return;
         if (tpaintBrush.getTypeBrush()==PaintBrush.POUR) return;
         tCanvas.drawLine(lastX,lastY,x,y,tpaint);
 
         lastX = x;
         lastY = y;
-
-
     }
     void setIsSitting(boolean isSitting){
         this.isSitting = isSitting;

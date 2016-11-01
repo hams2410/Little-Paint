@@ -15,7 +15,6 @@ public class PaintBrush {
 
     private Paint bPaint;
 
-
     public static final int PENCIL = 1;
     public static final int PEN = 2;
     public static final int MARKER = 3;

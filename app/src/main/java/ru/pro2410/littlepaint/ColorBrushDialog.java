@@ -23,7 +23,6 @@ public class ColorBrushDialog extends Dialog {
         super(context);
         width = 412;
         height = 550;
-
     }
 
     @Override
@@ -68,8 +67,6 @@ public class ColorBrushDialog extends Dialog {
 
             super(context);
 
-
-
             lineX1 = 20;
             lineX2 = center_X*2-20;
             lineY1 = center_Y+radiusSweep+65 - 45;
@@ -97,7 +94,6 @@ public class ColorBrushDialog extends Dialog {
             centerPaint.setStrokeWidth(13);
             centerPaint.setColor(currentColor);
 
-
         }
         private int[] getColor(int color){
             if (color == Color.BLACK || color == Color.WHITE){
@@ -115,8 +111,6 @@ public class ColorBrushDialog extends Dialog {
         @Override
         protected void onDraw(Canvas canvas) {
 
-
-
             centerPaint.setColor(currentColor);
 
             canvas.drawCircle(center_X,center_Y,radiusSweep,sweepPaint);
@@ -127,7 +121,6 @@ public class ColorBrushDialog extends Dialog {
                 centerPaint.setStyle(Paint.Style.STROKE);
                 canvas.drawCircle(center_X,center_Y,radiusCircleCenter+10,centerPaint);
             }
-
             centerPaint.setStyle(Paint.Style.FILL);
         }
         int ave(int src,int c, float p){return src+Math.round(p*(c-src)); }
@@ -206,7 +199,6 @@ public class ColorBrushDialog extends Dialog {
                         dismiss();
                     }
             }
-
             return true;
         }
     }

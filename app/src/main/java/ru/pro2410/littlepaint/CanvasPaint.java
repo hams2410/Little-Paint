@@ -9,8 +9,6 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 public class CanvasPaint extends SurfaceView implements SurfaceHolder.Callback{
-
-
     private PaintThread paintThread;
     public Bitmap mBitmap;
 
@@ -21,7 +19,6 @@ public class CanvasPaint extends SurfaceView implements SurfaceHolder.Callback{
     public CanvasPaint(Context context, AttributeSet attrs) {
         super(context, attrs);
         getHolder().addCallback(this);
-
     }
 
     @Override
@@ -39,7 +36,6 @@ public class CanvasPaint extends SurfaceView implements SurfaceHolder.Callback{
             mBitmap = Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888);
             paintThread.setBitmap(mBitmap,true);
         }else paintThread.setBitmap(mBitmap,false);
-
     }
 
     @Override
@@ -61,7 +57,6 @@ public class CanvasPaint extends SurfaceView implements SurfaceHolder.Callback{
             switch (event.getAction()){
                 case MotionEvent.ACTION_DOWN:
                     paintThread.startDraw(event.getX(),event.getY());
-
                     break;
                 case MotionEvent.ACTION_MOVE:
                     paintThread.moveDraw(event.getX(),event.getY());
@@ -73,8 +68,6 @@ public class CanvasPaint extends SurfaceView implements SurfaceHolder.Callback{
                         paintThread.isEndo = true;
                     }
                     else flag = false;
-
-
                     break;
             }
         }else if (event.getY()>=194&&event.getY()<=778&&paintThread.getIsSitting()){
@@ -82,7 +75,6 @@ public class CanvasPaint extends SurfaceView implements SurfaceHolder.Callback{
             flag = true;
             paintThread.setIsSitting(false);
         }
-
         return true;
     }
     PaintThread getTreadPaint(){

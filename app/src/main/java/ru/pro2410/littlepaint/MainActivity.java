@@ -42,7 +42,6 @@ public class MainActivity extends Activity {
     public RelativeLayout sittingRelative;
     private LinearLayout linearBrush;
 
-
     private SeekBar seekBarSize;
     private SeekBar seekBarRadius;
 
@@ -55,14 +54,12 @@ public class MainActivity extends Activity {
 
     private PaintBrush mPaintBrush;
 
-
     public static PaintThread mPaintThread;
     private boolean isCallSpinner;
 
     private final static int INDEX_CLEAR = 1;
     private final static int INDEX_EXIT = 2;
     private boolean isCancellKey;
-
 
     private class SaveBitmapTask extends AsyncTask<Void,Void,Void>{
         Dialog dialog = new Dialog(MainActivity.this,R.style.dialog_theme);
@@ -93,7 +90,6 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -149,7 +145,6 @@ public class MainActivity extends Activity {
         textRadius.setText(str1);
         seekBarRadius.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
-
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (progress>0){
@@ -159,7 +154,6 @@ public class MainActivity extends Activity {
                         isCallSpinner = true;
                         mSpinner.setSelection(mPaintBrush.getBlurType());
                     }
-
                 }
                 else {
                     mPaintBrush.setStyle(0,null);
@@ -167,11 +161,9 @@ public class MainActivity extends Activity {
                         isCallSpinner = true;
                         mSpinner.setSelection(0);
                     }
-
                 }
                 String str1 =  getResources().getText(R.string.radius)+" "+String.valueOf(progress);
                 textRadius.setText(str1);
-
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {resetPreset();}
@@ -197,15 +189,12 @@ public class MainActivity extends Activity {
                             seekBarRadius.setProgress((int) mPaintBrush.blurRadius);
                     }
                 } else isProgramchangeItem = false;
-
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
-
     }
 
     @Override
@@ -262,7 +251,6 @@ public class MainActivity extends Activity {
         }else if (keyCode == KeyEvent.KEYCODE_BACK&&!mPaintThread.getIsSitting()){
             dialogCreate(INDEX_EXIT);
             isCancellKey = true;
-
         }
         return super.onKeyDown(keyCode, event);
     }
@@ -272,12 +260,10 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
         startActivityForResult(intent, 23);
-
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK && requestCode == 23) {
-
 
             Bitmap bitmap  = getPicture(data.getData());
             Bitmap bitmap1 = bitmap.copy(Bitmap.Config.ARGB_8888,true);
@@ -291,7 +277,6 @@ public class MainActivity extends Activity {
             }
             CurrentState.isClearBitmapAfterOnStop = true;
             canvasPaint.mBitmap = bitmap1;
-
 
         }
     }
@@ -321,7 +306,6 @@ public class MainActivity extends Activity {
                 dialogCreate(INDEX_EXIT);
                 break;
         }
-
     }
 
     @Override
@@ -492,7 +476,6 @@ public class MainActivity extends Activity {
             textTypeBlur.setTextColor(ResourcesCompat.getColor(getResources(),R.color.colorNotClickable,null));
             mSpinner.setEnabled(false);
         }
-
         ImageButton button = (ImageButton) findViewById(R.id.idButtonPallete);
 
         if (mPaintBrush.getTypeBrush()==PaintBrush.ERASER){
@@ -514,7 +497,6 @@ public class MainActivity extends Activity {
     private void setSelectedBrush(View view) {
         view.setBackgroundResource(R.drawable.shape2);
     }
-
 
     private void resetPreset() {
         int count=linearBrush.getChildCount();
